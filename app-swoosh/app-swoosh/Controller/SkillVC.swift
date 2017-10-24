@@ -9,11 +9,15 @@
 import UIKit
 
 class SkillVC: UIViewController {
-
+    //var myData:String! implictly unwrappped optional. Use when you can guarantee variable will have data in it before used
+    //var myData:String? optional. Use when there may or may not be data in the variable at runtime
+    var player: Player!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print(player.desiredLeague)
     }
 
     override func didReceiveMemoryWarning() {

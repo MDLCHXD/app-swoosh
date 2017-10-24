@@ -8,7 +8,7 @@
 
 import Foundation
 //use a struct when using default swift things like strings adn are faster
-//use a cla
+//use a class when dealing with custom objects
 struct Player {
     var desiredLeague: String?
     var selectedSkillLevel :String?

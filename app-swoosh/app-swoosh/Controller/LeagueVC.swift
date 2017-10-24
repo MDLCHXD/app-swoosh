@@ -8,6 +8,7 @@
 
 import UIKit
 // PRO TIP: whenever you need to work with data put it in a Struct or Class, never pass around multiple variables between view controllers
+//PRO TIP: prepareForSegue is always called before viewDidLoad on the destinataion view controller
 class LeagueVC: UIViewController {
     //decalred a struct
     var player: Player!
@@ -25,19 +26,14 @@ class LeagueVC: UIViewController {
 
     @IBAction func mensTapped(_ sender: Any) {
         selectLeague(leagueType: "mens")
-        
     }
     @IBAction func womensTapped(_ sender: Any) {
         selectLeague(leagueType: "womens")
-
 
     }
 
     @IBAction func coedTapped(_ sender: Any) {
         selectLeague(leagueType: "coed")
-
-
-
     }
     
     func selectLeague(leagueType: String){
@@ -46,5 +42,10 @@ class LeagueVC: UIViewController {
 
     }
     @IBOutlet weak var nextBtn: BorderButton!
-    
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let skillVC = segue.destination as? SkillVC {
+            skillVC.player = player
+        }
+    }
 }
