@@ -116,6 +116,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="H4u-qF-fU5" eventType="touchUpInside" id="FNA-Ot-NfY"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="rMX-nJ-WO9">
                                 <rect key="frame" x="0.0" y="40" width="375" height="91"/>
@@ -208,6 +211,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9uB-xN-r9q"/>
                     </view>
+                    <connections>
+                        <segue destination="NQc-Qo-Oja" kind="show" identifier="skillVCSegue" id="D1v-Vx-SFO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nm8-d7-Xk5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="exo-q8-Xhe" userLabel="Exit" sceneMemberID="exit"/>
@@ -230,6 +236,10 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="m9o-Kw-v56">
                                         <rect key="frame" x="128" y="0.0" width="119" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="119" id="Eqc-Af-WLr"/>
+                                            <constraint firstAttribute="height" constant="23" id="P1U-LS-a8L"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdY-9L-lep">
                                         <rect key="frame" x="112.5" y="74" width="150" height="20"/>
@@ -242,6 +252,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="m9o-Kw-v56" secondAttribute="trailing" constant="128" id="2Y9-D3-vaw"/>
+                                    <constraint firstItem="DdY-9L-lep" firstAttribute="top" secondItem="m9o-Kw-v56" secondAttribute="bottom" constant="51" id="Mun-yh-egQ"/>
+                                    <constraint firstItem="m9o-Kw-v56" firstAttribute="top" secondItem="9Z9-Pz-2Az" secondAttribute="top" constant="10" id="Sjd-0x-8bg"/>
+                                    <constraint firstItem="m9o-Kw-v56" firstAttribute="leading" secondItem="9Z9-Pz-2Az" secondAttribute="leading" constant="128" id="r0R-Zz-TIu"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="0po-9q-lNf">
                                 <rect key="frame" x="20" y="184" width="335" height="36"/>
@@ -306,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uts-v2-t5I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1412" y="117.39130434782609"/>
+            <point key="canvasLocation" x="1543" y="116"/>
         </scene>
     </scenes>
     <resources>
